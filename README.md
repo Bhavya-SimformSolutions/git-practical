@@ -1,5 +1,7 @@
 # Advanced Git Practice
 
+## Assignment Overview :
+The objective of this assignment was to get familiar with Git Flow for structured branching and to practice advanced Git operations such as **Squash**, **Reset**, **Rebase**, and **Cherry-Pick**.
 ## Commands Used
 
 ### Initialize Repository and Git Flow
@@ -20,21 +22,25 @@ git checkout -b TP2-T1299_Project_Setup_SubBranch
 ```
 
 ### Perform Git Operations
-**Squash Commit:**
+**Squash Commit:**</br>
+Combine multiple commits into one for a cleaner history.
 ```bash
 git rebase -i HEAD~<number_of_commits>
 ```
-**Reset:**
+**Reset:**</br>
+Undo changes either by keeping them staged (--soft) or discarding completely (--hard).
 ```bash
 git reset --soft HEAD~1
 git reset --hard HEAD~1
 ```
-**Rebase:**
+**Rebase:**</br>
+Update your branch with the latest changes from develop.
 ```bash
 git checkout TP2-T1299_Project_Setup_SubBranch
 git rebase develop
 ```
-**Cherry-Pick a Commit:**
+**Cherry-Pick a Commit:**</br>
+Apply a specific commit from another branch.
 ```bash
 git cherry-pick <commit-hash>
 ```
